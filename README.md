@@ -19,7 +19,7 @@ Daha karar verilmedi, 2D Gothic Temada Platformer tarzı bir aksiyon rpg'si yap�
 - Obstacles
 - Scene System
 
-##Hedef Kitle
+## Hedef Kitle
 - 2D rougelike hayranları
 - Gothic temada olan yeni bir oyun oynamak isteyen kullanıcılar
 - Souls-Like zorluk ile play to relax arasında bir soft spot arayan oyun sevdalıları
