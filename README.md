@@ -1,7 +1,7 @@
 # 51. Bölge
 ## Takım Elemanları
 - Mehmet Utku Özhun: Scrum Master
-- Aybars Ekin: Developer-Designer
+- Aybars Ekin: Product Owner - Designer
 - Elif Yıldırım: Developer
 - Sema Tiftikçi: Developer
 - Enes Kartopu: Developer
