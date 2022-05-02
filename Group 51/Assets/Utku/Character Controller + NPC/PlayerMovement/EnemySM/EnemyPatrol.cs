@@ -10,6 +10,7 @@ public class EnemyPatrol : MonoBehaviour
     private int moveDirection = 0;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
     private Vector2 velocity;
     float trans1;
     float trans2;
@@ -19,9 +20,19 @@ public class EnemyPatrol : MonoBehaviour
         trans2 = point2.transform.position.x;
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer.flipX = true;
     }
+
+
+    public void Update()
+    {
+        _animator.SetFloat("Speed", Mathf.Abs(_rigidbody.velocity.x));
+    }
+
     public void FixedUpdate()
     {
+
         switch (moveDirection)
         {
             case 0://left

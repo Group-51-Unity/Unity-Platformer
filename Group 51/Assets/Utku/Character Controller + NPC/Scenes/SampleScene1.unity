@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 189115116}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: point2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 1247386236}
   - component: {fileID: 1247386230}
   - component: {fileID: 1247386234}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: VeryAngryEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ Animator:
   m_GameObject: {fileID: 1247386229}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6472d35283c431148880c54c212e0b07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -529,6 +529,36 @@ MonoBehaviour:
   point1: {fileID: 1767787628}
   point2: {fileID: 189115115}
   patrolSpeed: 4.86
+--- !u!1 &1589006084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1589006085}
+  m_Layer: 7
+  m_Name: Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1589006085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589006084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: -0.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1877809822}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767787628
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767787629}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: point1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,10 +602,11 @@ GameObject:
   - component: {fileID: 1877809819}
   - component: {fileID: 1877809818}
   - component: {fileID: 1877809817}
+  - component: {fileID: 1877809824}
   - component: {fileID: 1877809823}
   - component: {fileID: 1877809816}
   - component: {fileID: 1877809821}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CharacterBaby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +764,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.99, y: -1.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1589006085}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -752,3 +784,21 @@ MonoBehaviour:
   maxJump: 1
   jumpSpeed: 8.98
   jumpPhase: 0
+--- !u!114 &1877809824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877809815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505b86912afa61b4dbf223324f249365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 1589006085}
+  attackRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  attackDamage: 37

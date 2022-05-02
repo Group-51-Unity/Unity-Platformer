@@ -13,4 +13,9 @@ public class PlayerInputGet : MonoBehaviour
     {
         return Input.GetAxisRaw("Horizontal");
     }
+
+    public bool GetAttackInput(){
+        return Input.GetButtonDown("Fire1");
+    }
+
 }
