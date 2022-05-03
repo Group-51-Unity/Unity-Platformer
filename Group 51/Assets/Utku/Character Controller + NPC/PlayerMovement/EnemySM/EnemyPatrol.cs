@@ -7,6 +7,7 @@ public class EnemyPatrol : MonoBehaviour
     public GameObject point1;
     public GameObject point2;
     public float patrolSpeed;
+    public float patrol_acceleration;
     private int moveDirection = 0;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
@@ -25,29 +26,28 @@ public class EnemyPatrol : MonoBehaviour
     }
 
 
-    public void Update()
-    {
-        _animator.SetFloat("Speed", Mathf.Abs(_rigidbody.velocity.x));
-    }
 
-    public void FixedUpdate()
-    {
 
+    public void Patrol()
+    {
+        float desiredspeed = -patrolSpeed;
+        float maxAcceleration = patrol_acceleration * Time.deltaTime;
         switch (moveDirection)
         {
             case 0://left
-                velocity.x = -patrolSpeed;
+                
+                velocity.x = Mathf.MoveTowards(velocity.x, desiredspeed, maxAcceleration);
                 _rigidbody.velocity = velocity;
-                if(transform.position.x < trans1) { moveDirection = 1; _spriteRenderer.flipX = false; };
+                if (transform.position.x < trans1) { moveDirection = 1; _spriteRenderer.flipX = false; };
                 break;
             case 1://right
-                velocity.x = patrolSpeed;
+                desiredspeed = desiredspeed * (-1f);
+                velocity.x = Mathf.MoveTowards(velocity.x, desiredspeed, maxAcceleration); ;
                 _rigidbody.velocity = velocity;
                 if (transform.position.x > trans2) { moveDirection = 0; _spriteRenderer.flipX = true; };
                 break;
         }
     }
-
 
     // Start is called before the first frame update
 }

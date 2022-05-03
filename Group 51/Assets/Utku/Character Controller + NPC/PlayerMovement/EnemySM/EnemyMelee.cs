@@ -1,12 +1,11 @@
 using UnityEngine;
 
-namespace Shinjingi
-{
+
     public class EnemyMelee : MonoBehaviour
     {
 
 
-        private GroundCheck ground;
+
         public Transform attackPoint;
         public float attackRange = 0.5f;
         public LayerMask playerLayers;
@@ -20,27 +19,13 @@ namespace Shinjingi
         // Start is called before the first frame update
         void Awake()
         {
-            ground = GetComponent<GroundCheck>();
             _animator = GetComponent<Animator>();
 
         }
         // Update is called once per frame
-        void Update()
-        {
-            //desiredAttack |= controller.input.RetrieveAttackInput();
-        }
-
-        private void FixedUpdate()
-        {
-            onGround = ground.IsGrounded();
 
 
-            if (desiredAttack && onGround)
-            {
-                desiredAttack = false;
-                _animator.SetTrigger("Attack");
-            }
-        }
+
         public void AttackAction()
         {
             Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayers);
@@ -55,4 +40,4 @@ namespace Shinjingi
             }
         }
     }
-}
+
