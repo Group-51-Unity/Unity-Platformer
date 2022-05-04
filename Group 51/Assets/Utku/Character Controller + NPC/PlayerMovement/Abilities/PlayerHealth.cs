@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+
+    //aybars health bar
+    public HealthBar healthBar;
+
+    
+    
     // Start is called before the first frame update
     public float maxHealth;
     public float currentHealth;
@@ -13,11 +19,16 @@ public class PlayerHealth : MonoBehaviour
         maxHealth = 100f;
         currentHealth = maxHealth;
         _animator = GetComponent<Animator>();
+        healthBar = FindObjectOfType<HealthBar>();
     }
+
+
+
 
     public void takeDamage(float Damage)
     {
         currentHealth -= Damage;
+        healthBar.UpdateHealth(currentHealth);
         Debug.Log("I took damage");
         _animator.SetTrigger("getHit");
         if (currentHealth < 0)
