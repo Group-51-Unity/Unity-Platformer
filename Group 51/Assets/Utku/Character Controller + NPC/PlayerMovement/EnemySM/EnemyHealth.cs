@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     private Animator _animator;
+    public Rigidbody2D _rigidbody;
+    private Vector2 velocity;
     void Awake()
     {
         maxHealth = 100f;
@@ -15,12 +17,15 @@ public class EnemyHealth : MonoBehaviour
         _animator = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(6, 7);
         Physics2D.IgnoreLayerCollision(7, 7);
-
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     public void takeDamage(float Damage)
     {
+        velocity.x = 0;
+        velocity.y = 0; 
         currentHealth -= Damage;
+        _rigidbody.velocity = velocity;
         Debug.Log("enemy took damage");
         _animator.SetTrigger("getHit");
         if (currentHealth < 0)

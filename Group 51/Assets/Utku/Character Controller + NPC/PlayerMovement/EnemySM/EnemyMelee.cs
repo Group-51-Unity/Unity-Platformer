@@ -1,43 +1,47 @@
 using UnityEngine;
 
 
-    public class EnemyMelee : MonoBehaviour
-    {
+public class EnemyMelee : MonoBehaviour
+{
 
 
 
-        public Transform attackPoint;
-        public float attackRange = 0.5f;
-        public LayerMask playerLayers;
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask playerLayers;
+    private Vector2 velocity;
 
-        private bool desiredAttack;
-        private bool onGround;
-        private Animator _animator;
+    private Rigidbody2D _rigidbody;
 
-        public int attackDamage;
+    public int attackDamage = 10;
 
         // Start is called before the first frame update
-        void Awake()
-        {
-            _animator = GetComponent<Animator>();
+    void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
 
-        }
+    }
         // Update is called once per frame
 
+    public void StartAttack()
+    {
+        velocity.x = 0;
+        velocity.y = 0;
+        _rigidbody.velocity = velocity;
+    }
 
+    public void AttackAction()
+    {
+        Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayers);
+        hitPlayer.GetComponent<PlayerHealth>().takeDamage(attackDamage);
+    }
 
-        public void AttackAction()
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint != null)
         {
-            Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayers);
-            hitPlayer.GetComponent<PlayerHealth>().takeDamage(attackDamage);
-        }
-
-        private void OnDrawGizmosSelected()
-        {
-            if (attackPoint != null)
-            {
-                Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-            }
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
     }
+}
 
