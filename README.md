@@ -51,9 +51,9 @@ Development Puanını Nasıl hesapladığımıza Hedefler Ve Görevler Sheetimiz
 ## Bitirmesi Tahmin Edilen Puan : 140+66=206
 
 ## Sprint Board SS
-![](https://drive.google.com/file/d/15C1P7N-O8AUYJ-e9vr-IrwENyMyB_cCP/view?usp=sharing)
-## Örnek Board 
-![](https://drive.google.com/file/d/1EyNBnsHu-mCaI-kqRDMz5xQRXqvbSrAb/view?usp=sharing)
+![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/Backlog.png)
+## Örnek Board (NPC)
+![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/NPC.png)
 
 ## Daily Scrum Notları
 [Daily Scrum Notları](https://docs.google.com/document/d/1qq4n1w2mdqjjdcCd9OtDfZgfMdgO4gGO95WPRLp_DAI/edit?usp=sharing "Daily Scrum Notları") dosyasına Product Backlog dosyası üzerinden de, charter üzerinden de erişebilirsiniz.
