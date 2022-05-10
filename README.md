@@ -54,6 +54,9 @@ Development Puanını Nasıl hesapladığımıza Hedefler Ve Görevler Sheetimiz
 ![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/Backlog.png)
 ## Örnek Board (NPC)
 ![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/NPC.png)
+## Ürünün güncel hali
+![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/SS.png)
+
 
 ## Daily Scrum Notları
 [Daily Scrum Notları](https://docs.google.com/document/d/1qq4n1w2mdqjjdcCd9OtDfZgfMdgO4gGO95WPRLp_DAI/edit?usp=sharing "Daily Scrum Notları") dosyasına Product Backlog dosyası üzerinden de, charter üzerinden de erişebilirsiniz.
