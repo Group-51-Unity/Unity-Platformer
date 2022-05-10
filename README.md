@@ -26,23 +26,23 @@ Daha karar verilmedi, 2D Gothic Temada Platformer tarzı bir aksiyon rpg'si yap�
 ##Product Backlog URL
 [Product Backlog](https://docs.google.com/document/d/1UrcESPB9La-JwkMdKqNYIf6GAmoovU8lvx6j5YyTLcQ/edit?usp=sharing "Product Backlog")
 ## Hedefler
-Project Charter Hazırlamak(10)
-Gerekli linkleri eklemek
-Özet çıkarmak
-Kullanacağımız bir üretkenlik aracında karar kılmak (10)
-Flowchart çıkarmak (10) 
-Taskları önem ve zorluğuna göre sıralamak (10)
-Scrum Master seçmek (10)
-Product Owner seçmek (10)
-MVP ye ulaşabilmek için Görev dağılımı yapmak (10)
-Ekipçe GitHub eğitimlerini tamamlamak (10)
-GitHub organisation açmak (10)
-GitHub Repositorysi açmak (10)
-Unity versiyonlarımızı eşitlemek (10)
-Görevlerimiz üzerine araştırma yapmak (10)
-Görevlerimizi geliştirmeye başlamak (10)
-Daily Scrum toplantılarımıza başlamak (10)
-Belirlediğimiz MVP ye ulaşmak. (66)
+ - Project Charter Hazırlamak(10)
+ - Gerekli linkleri eklemek
+ - Özet çıkarmak
+ - Kullanacağımız bir üretkenlik aracında karar kılmak (10)
+ - Flowchart çıkarmak (10) 
+ - Taskları önem ve zorluğuna göre sıralamak (10)
+ - Scrum Master seçmek (10)
+ - Product Owner seçmek (10)
+ - MVP ye ulaşabilmek için Görev dağılımı yapmak (10)
+ - Ekipçe GitHub eğitimlerini tamamlamak (10)
+ - GitHub organisation açmak (10)
+ - GitHub Repositorysi açmak (10)
+ - Unity versiyonlarımızı eşitlemek (10)
+ - Görevlerimiz üzerine araştırma yapmak (10)
+ - Görevlerimizi geliştirmeye başlamak (10)
+ - Daily Scrum toplantılarımıza başlamak (10)
+ - Belirlediğimiz MVP ye ulaşmak. (66)
 ## Hedef Puanlama Kriterlerimiz
 Project management görevlerini 10’ar puandan hesaplamamız üzerinden, Project Charter’da görebileceğiniz Efor tablosunda MVP’ye ulaşmak için 66 puanlık iş yapabilirdik. Toplamda 206 Puana kadar ulaşabilirdik. Projenin gerektirdiği toplam puan 125.5(Development Effort)+140(Management) = 265.5 olduğu halde MVP’yi bir bütün halinde almaya karar verdik.  
 Development Puanını Nasıl hesapladığımıza Hedefler Ve Görevler Sheetimizden ulaşabilirsiniz.
