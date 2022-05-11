@@ -57,6 +57,17 @@ Development Puanını Nasıl hesapladığımıza Hedefler Ve Görevler Sheetimiz
 ## Ürünün güncel hali
 ![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/SS.png)
 
+## Review: 
+
+Bu sprintde kaydedilen gelişmeler gözden geçirildi. Bununla beraber sprint boyunca yapılan gelişmeleri daha verimli hale nasıl getirilir sorusuna yanıt arandı. 
+Daily scrumların, takımı güncel tuttuğu konusunda hem fikir olundu ve bunun sürdürülmesi noktasına dikkat çekildi. Sprint de ulaşılamayan hedefler gözden geçirilerek aciliyeti vurgulanıp planlandı. 
+1. sprint de teknik sıkıntılar yaşayan takım üyeleri dinlenerek alternatif çözümler üretildi. Önümüzdeki sprintde neler yapılacağı kısaca konuşuldu. Gelinen ilerlemeyi referans göstererek motivasyon sağlandı.
+
+## Retrospective
+
+ - Minimum Viable Product'a ulaşılamaması sebebi ile, hizimizin arttırılmasına karar verildi. 
+ - Daily scrumların discord yerine WhatsApp üzerinden yapılmasına karar verildi 
+
 
 ## Daily Scrum Notları
 [Daily Scrum Notları](https://docs.google.com/document/d/1qq4n1w2mdqjjdcCd9OtDfZgfMdgO4gGO95WPRLp_DAI/edit?usp=sharing "Daily Scrum Notları") dosyasına Product Backlog dosyası üzerinden de, charter üzerinden de erişebilirsiniz.
