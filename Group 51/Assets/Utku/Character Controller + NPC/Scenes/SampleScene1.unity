@@ -507,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 130
   currentHealth: 0
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 1247386233}
 --- !u!61 &1247386232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -693,7 +693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589006084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -0.16, z: 0}
+  m_LocalPosition: {x: 0.135, y: -0.062, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1877809822}
@@ -982,7 +982,7 @@ Animator:
   m_GameObject: {fileID: 1877809815}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6472d35283c431148880c54c212e0b07, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4b8ee3c2162001745a0fa6f706cfc54b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

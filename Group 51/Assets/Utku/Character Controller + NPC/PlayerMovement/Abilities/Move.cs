@@ -41,6 +41,7 @@ public class Move : MonoBehaviour
         desDirection.x = _playerInputGet.GetMoveInput();
         desSpeed = new Vector2(maxSpeed * desDirection.x, 0f);
         _animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+        _animator.SetFloat("verticalSpeed", velocity.y);
 
     }
 
@@ -52,11 +53,13 @@ public class Move : MonoBehaviour
         {
             maxSpeedChange = acceleration * Time.deltaTime;
             _jump.setJumpPhase(0);
+            _animator.SetBool("onGround", true);
         }
         else
         {
             _jump.setJumpPhase(1);
             maxSpeedChange = airAcceleration * Time.deltaTime;
+            _animator.SetBool("onGround", false);
         }
         velocity.x = Mathf.MoveTowards(velocity.x, desSpeed.x, maxSpeedChange);
         if(_rigidbody.velocity.x < 0f) { _transform.localScale = new Vector3(-5, 5, 1); }

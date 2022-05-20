@@ -14,6 +14,7 @@ public class Enemy_Run : StateMachineBehaviour
         _enemyPatrol = animator.GetComponent<EnemyPatrol>();
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         _rigidbody = animator.GetComponent<Rigidbody2D>();
+        animator.SetBool("onGround", true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -31,6 +32,8 @@ public class Enemy_Run : StateMachineBehaviour
     {
         animator.ResetTrigger("Attack");
     }
+
+
 
 
 }
