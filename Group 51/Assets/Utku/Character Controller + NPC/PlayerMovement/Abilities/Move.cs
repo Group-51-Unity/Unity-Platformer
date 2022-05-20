@@ -19,8 +19,10 @@ public class Move : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Jump _jump;
     private BoxCollider2D _boxCollider;
+    private Animator _animator;
     private PlayerInputGet _playerInputGet;
     private GroundCheck _groundCheck;
+    private Transform _transform;
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,6 +31,8 @@ public class Move : MonoBehaviour
         _playerInputGet = GetComponent<PlayerInputGet>();
         _groundCheck = GetComponent<GroundCheck>();
         _jump = GetComponent<Jump>();
+        _animator = GetComponent<Animator>();
+        _transform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -36,6 +40,8 @@ public class Move : MonoBehaviour
     {
         desDirection.x = _playerInputGet.GetMoveInput();
         desSpeed = new Vector2(maxSpeed * desDirection.x, 0f);
+        _animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+
     }
 
     private void FixedUpdate()
@@ -53,6 +59,8 @@ public class Move : MonoBehaviour
             maxSpeedChange = airAcceleration * Time.deltaTime;
         }
         velocity.x = Mathf.MoveTowards(velocity.x, desSpeed.x, maxSpeedChange);
+        if(_rigidbody.velocity.x < 0f) { _transform.localScale = new Vector3(-5, 5, 1); }
+        else { _transform.localScale = new Vector3(5, 5, 1); }
         _rigidbody.velocity = velocity;
     }
 }
