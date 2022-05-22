@@ -20,6 +20,7 @@ public class Jump : MonoBehaviour
     private BoxCollider2D _boxCollider;
     private PlayerInputGet _playerInputGet;
     private GroundCheck _groundCheck;
+    private Animator _animator;
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,6 +28,7 @@ public class Jump : MonoBehaviour
         _boxCollider = GetComponent<BoxCollider2D>();
         _playerInputGet = GetComponent<PlayerInputGet>();
         _groundCheck = GetComponent<GroundCheck>();
+        _animator = GetComponent<Animator>();
         onGround = _groundCheck.IsGrounded();
 
     }
@@ -65,6 +67,7 @@ public class Jump : MonoBehaviour
 
     private void JumpAction()
     {
+        _animator.SetTrigger("Jump");
         if(jumpPhase < maxJump)
         {
             jumpPhase++;
