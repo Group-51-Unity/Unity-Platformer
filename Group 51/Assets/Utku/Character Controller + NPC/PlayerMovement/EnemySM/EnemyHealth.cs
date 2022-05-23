@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
         _animator = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(6, 7);
         Physics2D.IgnoreLayerCollision(7, 7);
+        Physics2D.IgnoreLayerCollision(6, 6);
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
