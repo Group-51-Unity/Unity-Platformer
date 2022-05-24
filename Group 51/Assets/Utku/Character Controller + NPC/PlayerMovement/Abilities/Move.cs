@@ -62,8 +62,8 @@ public class Move : MonoBehaviour
             _animator.SetBool("onGround", false);
         }
         velocity.x = Mathf.MoveTowards(velocity.x, desSpeed.x, maxSpeedChange);
-        if(_rigidbody.velocity.x < 0f) { _transform.localScale = new Vector3(-5, 5, 1); }
-        else { _transform.localScale = new Vector3(5, 5, 1); }
+        if(_rigidbody.velocity.x < 0f) { _transform.localScale = new Vector3(-(1.5f), (1.5f), 1); }
+        else { _transform.localScale = new Vector3((1.5f), (1.5f), 1); }
         _rigidbody.velocity = velocity;
     }
 }
