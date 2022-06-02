@@ -3,18 +3,19 @@ using UnityEngine;
 
     public class Attack: MonoBehaviour
     {
-
         private PlayerInputGet _playerinputget;
         private GroundCheck _groundcheck;
         public Transform attackPoint;
         public float attackRange = 0.5f;
         public LayerMask enemyLayers;
+  
 
         private bool desiredAttack;
         private bool onGround;
         private Animator _animator;
 
         public int attackDamage;
+    [SerializeField] private AudioSource attackSoundEffect;
 
         // Start is called before the first frame update
         void Awake()
@@ -27,6 +28,7 @@ using UnityEngine;
         // Update is called once per frame
         void Update()
         {
+        attackSoundEffect.Play();
             desiredAttack |= _playerinputget.GetAttackInput();
         }
 

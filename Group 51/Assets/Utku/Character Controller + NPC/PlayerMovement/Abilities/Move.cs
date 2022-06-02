@@ -9,6 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(GroundCheck))]
 public class Move : MonoBehaviour
 {
+    [SerializeField] private AudioSource runSoundEffect;
     public float maxSpeed;
     public float acceleration;
     public float airAcceleration;
@@ -51,6 +52,7 @@ public class Move : MonoBehaviour
         if (desSpeed.x == 0 && velocity.x == 0 && velocity.y == 0) { return; }
         if (_groundCheck.IsGrounded())
         {
+            runSoundEffect.Play();
             maxSpeedChange = acceleration * Time.deltaTime;
             _jump.setJumpPhase(0);
             _animator.SetBool("onGround", true);
