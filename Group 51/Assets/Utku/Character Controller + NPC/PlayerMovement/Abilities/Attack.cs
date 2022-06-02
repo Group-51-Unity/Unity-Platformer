@@ -15,7 +15,7 @@ using UnityEngine;
         private Animator _animator;
 
         public int attackDamage;
-    [SerializeField] private AudioSource attackSoundEffect;
+   
 
         // Start is called before the first frame update
         void Awake()
@@ -28,7 +28,7 @@ using UnityEngine;
         // Update is called once per frame
         void Update()
         {
-        attackSoundEffect.Play();
+    
             desiredAttack |= _playerinputget.GetAttackInput();
         }
 
