@@ -39,16 +39,20 @@ public class EnemyPatrol : MonoBehaviour
                 
                 velocity.x = Mathf.MoveTowards(velocity.x, desiredspeed, maxAcceleration);
                 _rigidbody.velocity = velocity;
-                if (transform.position.x < trans1) { moveDirection = 1; _currenttransform.localScale = new Vector3(5, 5, 1); };
+                if (transform.position.x < trans1) { moveDirection = 1; _currenttransform.localScale = new Vector3(1, 1, 1); };
                 break;
             case 1://right
                 desiredspeed = desiredspeed * (-1f);
                 velocity.x = Mathf.MoveTowards(velocity.x, desiredspeed, maxAcceleration); ;
                 _rigidbody.velocity = velocity;
-                if (transform.position.x > trans2) { moveDirection = 0; _currenttransform.localScale = new Vector3(-5, 5, 1); };
+                if (transform.position.x > trans2) { moveDirection = 0; _currenttransform.localScale = new Vector3(-1, 1, 1); };
                 break;
         }
     }
+
+
+
+
 
     // Start is called before the first frame update
 }

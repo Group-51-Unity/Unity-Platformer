@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
         _animator = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(6, 7);
         Physics2D.IgnoreLayerCollision(7, 7);
+        Physics2D.IgnoreLayerCollision(6, 6);
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -27,6 +28,10 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= Damage;
         _rigidbody.velocity = velocity;
         Debug.Log("enemy took damage");
+        if (gameObject.GetComponent<Animation>() != null)
+        {
+            gameObject.GetComponent<Animation>().Play("ghoulTakeDamage");
+        }
         _animator.SetTrigger("getHit");
         if (currentHealth < 0)
         {

@@ -25,6 +25,11 @@ Daha karar verilmedi, 2D Gothic Temada Platformer tarzı bir aksiyon rpg'si yap�
 - Souls-Like zorluk ile play to relax arasında bir soft spot arayan oyun sevdalıları
 ##Product Backlog URL
 [Product Backlog](https://docs.google.com/document/d/1UrcESPB9La-JwkMdKqNYIf6GAmoovU8lvx6j5YyTLcQ/edit?usp=sharing "Product Backlog")
+
+---
+# Sprint 1 
+
+
 ## Hedefler
  - Project Charter Hazırlamak(10)
  - Gerekli linkleri eklemek
@@ -71,3 +76,65 @@ Daily scrumların, takımı güncel tuttuğu konusunda hem fikir olundu ve bunun
 
 ## Daily Scrum Notları
 [Daily Scrum Notları](https://docs.google.com/document/d/1qq4n1w2mdqjjdcCd9OtDfZgfMdgO4gGO95WPRLp_DAI/edit?usp=sharing "Daily Scrum Notları") dosyasına Product Backlog dosyası üzerinden de, charter üzerinden de erişebilirsiniz.
+
+
+---
+# Sprint 2
+
+
+## Sprint Hedefleri
+ 
+### Hedefler (32/44)
++ Ana karakter (11/16)
+ + Ana karakterin hareket scriptleri (3/4)
+ + Ana karakter saldırı scriptleri (2/2)
+ + Ana karakter kombo saldırı hareketleri (0/2)
+ + Ana karakter Hurtbox (1/1)
+ + Ana karakter Hitbox (1/1)
+ + Ana karakter Animasyonları (4/5)
+ + Ana karakter Cinemachine kullanımı (0/1)
++ Harita (8/9)
+ + Harita Tile palette (1/1)
+ + 1. Harita (2/2)
+ + 2. Harita (2/2)
+ + Arkaplan (2/2)
+ + Optimizasyon (0/2)
++ NPC (7/13)
+ + Hareket scriptleri (2/4)
+ + Saldırı scriptleri (1/2)
+ + Can scriptleri (1/1)
+ + Animasyonlar (3/3)
+ + Spawner (0/1)
+ + Pathfinding (0/1)
+ + Projectile (0/1)
++ Arayüz (6/6)
+ + Can barı (4/4)
+ + Scriptler (2/2)
+ + Kanvas (1/1)
+ + Prefab (1/1)
+ + ESC tuşu (2/2)
+
+## Hedef Puanlama Kriterlerimiz ve bu hedeflerimize ne kadar ulaşabildik
+Hedeflerimizi puanlarken görevlerin ne kadar zaman ve efor alacağına dair tahminlerimizden faydalandık. MVP’ye ulaşmak için önceden belirlediğimiz 66 puanı revize ederek aynı görevleri 44 puan üzerinden belirlemeye karar verdik. Minimum Viable Product’ımıza ulaşmak üzere adım adım ilerliyoruz. Birkaç küçük eksiklik haricinde görevlerimizin hepsi bitmek üzere. Artık sadece işlerimizi birleştirme ve yaptıklarımızı revize etmemiz gerekli.
+
+## Sprint Board SS
+
+
+![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/backlog%201%20.png)
+
+## Ürünün Güncel Hali 
+
+![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/ScreenShot.png)
+
+## Sprint Review
+
+Alınan Kararlar: Ürünün beklenilen özelliklerinin zaman kısıtlamamız altında mümkün olmadığına karar verilerek, Hedeflenilen özelliklerin bir kısmı çıkarıldı.
+
+## Sprint Retrospective
+ - Save Sistemi, ve Optional Eklentiler olarak görülen kısım, mümkün görülmemesi sebebiyle çıkarıldı.
+ - Ana karakterin büyücü özelliklerine de sahip olmasına karar verildi. 
+ - Daily Scrumların whatsapp yerine Discordda ayrı bir metin kanalından yapılmasına karar verildi.
+
+## Daily Scrum
+
+[Daily Scrum](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/Daily%20Scrum.png)

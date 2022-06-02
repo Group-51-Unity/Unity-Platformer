@@ -33,7 +33,11 @@ public class EnemyMelee : MonoBehaviour
     public void AttackAction()
     {
         Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayers);
-        hitPlayer.GetComponent<PlayerHealth>().takeDamage(attackDamage);
+        if (hitPlayer)
+        {
+            hitPlayer.GetComponent<PlayerHealth>().takeDamage(attackDamage);
+
+        }
     }
 
     private void OnDrawGizmosSelected()
