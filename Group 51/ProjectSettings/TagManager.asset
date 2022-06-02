@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - Ghoul
+  - 
   - 
   - 
   - 
@@ -41,6 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
-    uniqueID: 656149453
+  - name: Backgraund
+    uniqueID: 4272779799
     locked: 0
