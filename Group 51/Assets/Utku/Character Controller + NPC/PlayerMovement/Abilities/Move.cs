@@ -9,6 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(GroundCheck))]
 public class Move : MonoBehaviour
 {
+    
     public float maxSpeed;
     public float acceleration;
     public float airAcceleration;
