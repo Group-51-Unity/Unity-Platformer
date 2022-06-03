@@ -34,19 +34,10 @@ using UnityEngine;
 
         private void FixedUpdate()
         {
-           
-
-
             if (desiredAttack)
-            {
-                onGround = _groundcheck.IsGrounded();
-                if (onGround)
-                {
-                    desiredAttack = false;
-                    //_animator.SetTrigger("Attack");
-                    characterAttack();
-                }
-                
+            {       
+                desiredAttack = false;
+                _animator.SetTrigger("Attack");
             }
         }
         public void characterAttack()
