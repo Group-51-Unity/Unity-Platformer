@@ -5,13 +5,11 @@ using UnityEngine;
 public class GroundCheck : MonoBehaviour
 {
     // Start is called before the first frame update
-    Transform _transform;
-    BoxCollider2D _boxCollider;
+    private BoxCollider2D _boxCollider;
     public float extraHeightTest;
     public LayerMask GroundLayers;
     private void Awake()
     {
-        _transform = GetComponent<Transform>();
         _boxCollider = GetComponent<BoxCollider2D>();
     }
 

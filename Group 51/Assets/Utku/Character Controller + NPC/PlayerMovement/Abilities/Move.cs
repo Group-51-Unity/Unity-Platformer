@@ -26,7 +26,7 @@ public class Move : MonoBehaviour
     private Transform _transform;
     public float mainCharScale;
     // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _boxCollider = GetComponent<BoxCollider2D>();
@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         desDirection.x = _playerInputGet.GetMoveInput();
         desSpeed = new Vector2(maxSpeed * desDirection.x, 0f);
