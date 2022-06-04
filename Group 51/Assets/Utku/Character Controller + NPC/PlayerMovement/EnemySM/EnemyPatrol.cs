@@ -16,6 +16,8 @@ public class EnemyPatrol : MonoBehaviour
     private Vector2 velocity;
     float trans1;
     float trans2;
+    [SerializeField] private float enemy_scale;
+
     private void Awake()
     {
         trans1 = point1.transform.position.x;
@@ -38,14 +40,16 @@ public class EnemyPatrol : MonoBehaviour
             case 0://left
                 
                 velocity.x = Mathf.MoveTowards(velocity.x, desiredspeed, maxAcceleration);
+                velocity.y = _rigidbody.velocity.y;
                 _rigidbody.velocity = velocity;
-                if (transform.position.x < trans1) { moveDirection = 1; _currenttransform.localScale = new Vector3(1, 1, 1); };
+                if (transform.position.x < trans1) { moveDirection = 1; _currenttransform.localScale = new Vector3((enemy_scale), (enemy_scale), 1); };
                 break;
             case 1://right
                 desiredspeed = desiredspeed * (-1f);
-                velocity.x = Mathf.MoveTowards(velocity.x, desiredspeed, maxAcceleration); ;
+                velocity.x = Mathf.MoveTowards(velocity.x, desiredspeed, maxAcceleration);
+                velocity.y = _rigidbody.velocity.y;
                 _rigidbody.velocity = velocity;
-                if (transform.position.x > trans2) { moveDirection = 0; _currenttransform.localScale = new Vector3(-1, 1, 1); };
+                if (transform.position.x > trans2) { moveDirection = 0; _currenttransform.localScale = new Vector3(-(enemy_scale), (enemy_scale), 1); };
                 break;
         }
     }

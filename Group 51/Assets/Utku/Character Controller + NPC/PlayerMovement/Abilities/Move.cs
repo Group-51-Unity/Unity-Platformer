@@ -9,7 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(GroundCheck))]
 public class Move : MonoBehaviour
 {
-    
+
     public float maxSpeed;
     public float acceleration;
     public float airAcceleration;
@@ -19,16 +19,15 @@ public class Move : MonoBehaviour
     private Vector2 velocity;
     private Rigidbody2D _rigidbody;
     private Jump _jump;
-    private BoxCollider2D _boxCollider;
     private Animator _animator;
     private PlayerInputGet _playerInputGet;
     private GroundCheck _groundCheck;
     private Transform _transform;
+    public float mainCharScale;
     // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _boxCollider = GetComponent<BoxCollider2D>();
         _playerInputGet = GetComponent<PlayerInputGet>();
         _groundCheck = GetComponent<GroundCheck>();
         _jump = GetComponent<Jump>();
@@ -37,7 +36,7 @@ public class Move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         desDirection.x = _playerInputGet.GetMoveInput();
         desSpeed = new Vector2(maxSpeed * desDirection.x, 0f);
@@ -63,8 +62,8 @@ public class Move : MonoBehaviour
             _animator.SetBool("onGround", false);
         }
         velocity.x = Mathf.MoveTowards(velocity.x, desSpeed.x, maxSpeedChange);
-        if(_rigidbody.velocity.x < 0f) { _transform.localScale = new Vector3(-(1.5f), (1.5f), 1); }
-        else { _transform.localScale = new Vector3((1.5f), (1.5f), 1); }
+        if (_rigidbody.velocity.x < 0f) { _transform.localScale = new Vector3(-(mainCharScale), (mainCharScale), 1); }
+        else { _transform.localScale = new Vector3((mainCharScale), (mainCharScale), 1); }
         _rigidbody.velocity = velocity;
     }
 }

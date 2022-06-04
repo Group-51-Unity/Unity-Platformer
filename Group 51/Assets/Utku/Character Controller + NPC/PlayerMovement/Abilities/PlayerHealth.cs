@@ -7,7 +7,9 @@ public class PlayerHealth : MonoBehaviour
 
     //aybars health bar
     public HealthBar healthBar;
-
+    public float invulnerableSeconds;
+    private float nextDamageTime = 0f;
+    private playerFlash _playerFlash;
     
     
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         _animator = GetComponent<Animator>();
         healthBar = FindObjectOfType<HealthBar>();
+        _playerFlash = GetComponent<playerFlash>();
     }
 
 
@@ -27,8 +30,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void takeDamage(float Damage)
     {
+        if(Time.time <= nextDamageTime)
+        {
+            return;
+        }
+        nextDamageTime = Time.time + invulnerableSeconds;
         currentHealth -= Damage;
         healthBar.UpdateHealth(currentHealth);
+        _playerFlash.Flash();
         Debug.Log("I took damage");
         _animator.SetTrigger("getHit");
         if (currentHealth < 0)
@@ -40,7 +49,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemy Died");
         _animator.SetBool("Dead", true);
         //GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
