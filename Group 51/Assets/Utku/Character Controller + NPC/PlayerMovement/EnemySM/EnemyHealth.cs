@@ -44,7 +44,8 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log("Enemy Died");
         _animator.SetBool("Dead", true);
-        //GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.enabled = false;
     }
 

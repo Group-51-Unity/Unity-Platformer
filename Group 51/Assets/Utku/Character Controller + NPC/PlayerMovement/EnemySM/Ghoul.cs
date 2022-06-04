@@ -28,7 +28,6 @@ public class Ghoul : MonoBehaviour
             _enemypatrol.Patrol();
             checkPlayerHit();
         }
-        gameObject.GetComponent<Animation>().Play("ghoulTakeDamage");
     }
 
 
