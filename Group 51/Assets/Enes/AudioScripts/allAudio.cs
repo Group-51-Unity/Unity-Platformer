@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class allAudio : MonoBehaviour
 {
+    public AudioSource attackSoundEffect;
     public AudioSource runSoundEffect;
+    public AudioSource jumpSoundEffect;
+    public AudioSource fallSoundEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,4 +23,17 @@ public class allAudio : MonoBehaviour
     {
         runSoundEffect.Play();
     }
+    void jumpSound()
+    {
+        jumpSoundEffect.Play();
+    }
+    void AttackSound()
+    {
+        attackSoundEffect.Play();
+    }
+    void fallingSound()
+    {
+        fallSoundEffect.Play();
+    }
+
 }
