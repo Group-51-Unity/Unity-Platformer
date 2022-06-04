@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 7595553909488152214}
   - component: {fileID: 7595553909488152209}
   - component: {fileID: 7595553909488152232}
-  - component: {fileID: 7595553909488152235}
   - component: {fileID: 7595553909488152212}
   - component: {fileID: 7595553909488152234}
   - component: {fileID: 7595553909488152237}
@@ -55,6 +54,7 @@ GameObject:
   - component: {fileID: 7595553909488152239}
   - component: {fileID: 7595553909488152225}
   - component: {fileID: 7595553909488152238}
+  - component: {fileID: 951318099}
   m_Layer: 7
   m_Name: mainCharacter
   m_TagString: Player
@@ -214,21 +214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f490f9ea9b941843873eaeb33522a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 7595553909488152235}
+  healthBar: {fileID: 0}
+  invulnerableSeconds: 1.05
   maxHealth: 100
   currentHealth: 10
---- !u!114 &7595553909488152235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7595553909488152222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d74d4ef9f3d718440a80ea1a71e076e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &7595553909488152212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -613,6 +602,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &951318099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7595553909488152222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc885b3ed4e1d63409dfcf62a53fd138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invulnerableMaterial: {fileID: 2100000, guid: e76e259ca1b4f9d4299b4a97eae95e1b, type: 2}
 --- !u!1 &7595553910275066997
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     private Animator _animator;
     public Rigidbody2D _rigidbody;
     private Vector2 velocity;
+    private enemyFlash _enemyFlash;
+    
     void Awake()
     {
         maxHealth = 100f;
@@ -19,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 7);
         Physics2D.IgnoreLayerCollision(6, 6);
         _rigidbody = GetComponent<Rigidbody2D>();
+        _enemyFlash = GetComponent<enemyFlash>();
     }
 
     public void takeDamage(float Damage)
@@ -28,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= Damage;
         _rigidbody.velocity = velocity;
         Debug.Log("enemy took damage");
+        _enemyFlash.Flash();
         if (gameObject.GetComponent<Animation>() != null)
         {
             gameObject.GetComponent<Animation>().Play("ghoulTakeDamage");
@@ -44,7 +48,8 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log("Enemy Died");
         _animator.SetBool("Dead", true);
-        //GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.enabled = false;
     }
 
