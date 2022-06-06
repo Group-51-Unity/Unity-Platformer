@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float maxHealth;
+    public float maxHealth=100f;
     public float currentHealth;
     private Animator _animator;
     public Rigidbody2D _rigidbody;
@@ -14,7 +14,6 @@ public class EnemyHealth : MonoBehaviour
     
     void Awake()
     {
-        maxHealth = 100f;
         currentHealth = maxHealth;
         _animator = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(6, 7);

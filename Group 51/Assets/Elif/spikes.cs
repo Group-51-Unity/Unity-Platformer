@@ -4,37 +4,15 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour
 {
-    public HealthBar healthBar;
-
-    public float maxHealth;
-    public float currentHealth;
-    private Animator _animator;
-
-    void Awake()
-    {
-        maxHealth = 100f;
-        currentHealth = maxHealth;
-        _animator = GetComponent<Animator>();
-        healthBar = FindObjectOfType<HealthBar>();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            currentHealth -= 2;
-            healthBar.UpdateHealth(currentHealth);
-
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
+            collision.GetComponent<PlayerHealth>().takeDamage(2);
+            collision.GetComponent<Rigidbody2D>().velocity = 4*Vector3.up;
         }
     }
 
-    void Die()
-    {
-        _animator.SetBool("Dead", true);
-        this.enabled = false;
-    }
+
 }
