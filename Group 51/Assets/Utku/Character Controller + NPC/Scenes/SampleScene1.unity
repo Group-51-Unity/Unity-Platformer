@@ -269,6 +269,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7595553909488152209, guid: 3a9003f749c385248aaf44b5d0abcc0d, type: 3}
+      propertyPath: mainCharScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7595553909488152215, guid: 3a9003f749c385248aaf44b5d0abcc0d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -333,13 +337,17 @@ PrefabInstance:
       propertyPath: healthAdditionSound
       value: 
       objectReference: {fileID: 560980122}
+    - target: {fileID: 7595553910275066998, guid: 3a9003f749c385248aaf44b5d0abcc0d, type: 3}
+      propertyPath: orthographic size
+      value: 3.61
+      objectReference: {fileID: 0}
     - target: {fileID: 7595553910275067017, guid: 3a9003f749c385248aaf44b5d0abcc0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.052946687
+      value: 0.34914398
       objectReference: {fileID: 0}
     - target: {fileID: 7595553910275067017, guid: 3a9003f749c385248aaf44b5d0abcc0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24547982
+      value: 0.9819193
       objectReference: {fileID: 0}
     - target: {fileID: 7595553910275067017, guid: 3a9003f749c385248aaf44b5d0abcc0d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1271,7 +1279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725996446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.988213, y: -1.0280807, z: -10}
+  m_LocalPosition: {x: -4.850856, y: -1.0280807, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 739391810}

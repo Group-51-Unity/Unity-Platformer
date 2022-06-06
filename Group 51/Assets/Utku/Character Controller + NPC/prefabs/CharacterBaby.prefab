@@ -165,6 +165,8 @@ MonoBehaviour:
   maxSpeed: 4
   acceleration: 15
   airAcceleration: 20
+  velocity: {x: 0, y: 0}
+  mainCharScale: 0.5
 --- !u!114 &5414245306119172940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5414245306119172943}
+  invulnerableSeconds: 0
   maxHealth: 100
   currentHealth: 10
 --- !u!114 &5414245306119172943
@@ -192,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74d4ef9f3d718440a80ea1a71e076e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
 --- !u!212 &5414245306119172976
 SpriteRenderer:
   m_ObjectHideFlags: 0
