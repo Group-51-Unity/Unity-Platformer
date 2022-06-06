@@ -11,6 +11,13 @@ public class allAudio : MonoBehaviour
     public Animator _animator;
     [SerializeField] public AudioSource healthAdditionSound;
     // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("potion"))
