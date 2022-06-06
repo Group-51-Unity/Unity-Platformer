@@ -9,16 +9,15 @@ public class allAudio : MonoBehaviour
     public AudioSource jumpSoundEffect;
     public AudioSource fallSoundEffect;
     public Animator _animator;
+    [SerializeField] public AudioSource healthAdditionSound;
     // Start is called before the first frame update
-    void Awake()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        _animator = GetComponent<Animator>();
-    }
+        if (collision.CompareTag("potion"))
+        {
+            healthAdditionSound.Play();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     void RunningSound()
     {
