@@ -129,7 +129,7 @@ MonoBehaviour:
   point2: {fileID: 3455221972499662548}
   patrolSpeed: 5
   patrol_acceleration: 15
-  enemy_scale: 3
+  enemy_scale: 2
 --- !u!50 &3455221971384131756
 Rigidbody2D:
   serializedVersion: 4
@@ -249,7 +249,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b61f1b86513628042ab449da8e08b9a0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
