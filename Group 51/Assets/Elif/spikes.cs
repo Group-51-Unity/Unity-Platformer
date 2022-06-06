@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spikes : MonoBehaviour
+public class Spikes : MonoBehaviour
 {
     public HealthBar healthBar;
 
@@ -29,7 +29,6 @@ public class spikes : MonoBehaviour
             {
                 Die();
             }
-
         }
     }
 
