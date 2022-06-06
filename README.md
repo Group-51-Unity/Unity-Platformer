@@ -138,3 +138,44 @@ Alınan Kararlar: Ürünün beklenilen özelliklerinin zaman kısıtlamamız alt
 ## Daily Scrum
 
 [Daily Scrum](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/Daily%20Scrum.png)
+
+
+
+
+---
+# Sprint 3 
+
+## Sprint Hedefleri
+ 
+### Hedefler (15/17)
++ Ana karakter (3/3)
+ + Ana karakterin hareket scriptleri (1/1)
+ + Ana karakter Animasyonları (1/1)
+ + Ana karakter Cinemachine kullanımı (1/1)
++ Harita (2/2)
+ + Optimizasyon (2/2)
++ NPC (4/6)
+ + Hareket scriptleri (2/2)
+ + Saldırı scriptleri (1/1)
+ + Spawner (0/1)
+ + Pathfinding (0/1)
+ + Projectile (1/1)
++ Genel Ayarlar (6/6)
+ + Boss (3/3)
+ + Yeni harita (1/1)
+ + Ses Efektleri (1/2) 
+## Hedef Puanlama Kriterlerimiz ve bu hedeflerimize ne kadar ulaşabildik
+Hedeflerimizi kısa sprint süresini düşünerek olabildiğince kısa tuttuk. Oyunumuza Yeni bir şey eklemektense, Eklediğimiz şeyleri birleştirmek ve kullanmak üzerine uğraştık. 
+## Sprint Board SS
+![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/screenshot%20sprint%20board.png)
+## Ürünün Güncel Hali 
+![](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/%C3%BCr%C3%BCng%C3%BCncelhali.png)
+
+## Sprint Review
+Zamanlama konusunda sıkıntılar yaşamış olsak da, ekip olarak olabildiğince güzel emek verdik. Elimizden Geleni yaptık. Ve Ürünümüzden olabildiğince memnunuz.
+
+## Sprint Retrospective
+-Discorddan yapılan Daily Scrumlar, Geri Whatsapp'a geçti.
+
+## Daily Scrum
+[Daily Scrum Linki](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/dailyscrum.png)
