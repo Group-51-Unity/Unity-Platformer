@@ -15,5 +15,9 @@ public class AngelHealthbar : MonoBehaviour
     public void Update()
     {
         AngelSlider.value = _enemyHealth.currentHealth;
+        if (_enemyHealth.currentHealth <= 0)
+        {
+            Application.Quit();
+        }
     }
 }

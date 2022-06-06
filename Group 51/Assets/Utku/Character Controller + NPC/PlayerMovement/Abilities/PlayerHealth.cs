@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -55,11 +56,8 @@ public class PlayerHealth : MonoBehaviour
     }
     private void PlayerDie()
     {
-        _animator.SetBool("Dead", true);
-        //GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // Update is called once per frame
 
 }
