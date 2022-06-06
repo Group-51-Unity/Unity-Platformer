@@ -5,14 +5,14 @@ using UnityEngine;
 public class playerFlash : MonoBehaviour
 {
 
-
+    public Material healMaterial;
     public Material invulnerableMaterial;
     private float playerinvulnerableDuration;
     private SpriteRenderer _spriterenderer;
     private Material originalMaterial;
     private Coroutine invulnerableRoutine;
     private PlayerHealth _playerhealth;
-
+    private Coroutine HealFlashRoutine;
 
     void Start()
     {
@@ -31,6 +31,22 @@ public class playerFlash : MonoBehaviour
             StopCoroutine(invulnerableRoutine);
         }
         invulnerableRoutine = StartCoroutine(FlashRoutine());
+    }
+
+    public void FlashHeal()
+    {
+        if(HealFlashRoutine != null)
+        {
+            StopCoroutine(HealFlashRoutine);
+        }
+        HealFlashRoutine = StartCoroutine(HealFlashCoRoutine());
+    }
+    private IEnumerator HealFlashCoRoutine()
+    {
+        _spriterenderer.material = healMaterial;
+        yield return new WaitForSeconds(0.5f);
+        _spriterenderer.material = originalMaterial;
+        HealFlashRoutine = null;
     }
 
     private IEnumerator FlashRoutine()

@@ -16,7 +16,7 @@ public class Move : MonoBehaviour
     private float maxSpeedChange;
     private Vector2 desDirection;
     private Vector2 desSpeed;
-    private Vector2 velocity;
+    public Vector2 velocity;
     private Rigidbody2D _rigidbody;
     private Jump _jump;
     private Animator _animator;

@@ -36,7 +36,6 @@ public class EnemyMelee : MonoBehaviour
         if (hitPlayer)
         {
             hitPlayer.GetComponent<PlayerHealth>().takeDamage(attackDamage);
-
         }
     }
 

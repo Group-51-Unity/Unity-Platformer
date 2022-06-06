@@ -44,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
-    void Die()
+    public void Die()
     {
         Debug.Log("Enemy Died");
         _animator.SetBool("Dead", true);

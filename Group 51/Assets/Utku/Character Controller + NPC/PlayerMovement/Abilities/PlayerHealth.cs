@@ -42,12 +42,18 @@ public class PlayerHealth : MonoBehaviour
         _animator.SetTrigger("getHit");
         if (currentHealth < 0)
         {
-            Die();
+            PlayerDie();
         }
 
     }
 
-    void Die()
+    public void Heal(float HealAmount)
+    {
+        currentHealth += HealAmount;
+        _playerFlash.FlashHeal();
+        healthBar.UpdateHealth(currentHealth);
+    }
+    private void PlayerDie()
     {
         _animator.SetBool("Dead", true);
         //GetComponent<Collider2D>().enabled = false;
