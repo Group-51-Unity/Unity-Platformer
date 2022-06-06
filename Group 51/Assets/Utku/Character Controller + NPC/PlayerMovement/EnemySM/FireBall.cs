@@ -14,14 +14,16 @@ public class FireBall : MonoBehaviour
     void Start()
     {
         _rigidbody.velocity = transform.up * fireSpeed * (-1f);
+        _rigidbody.AddForce(new Vector2(9.8f * 25f, 9.8f * 25f));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")){
             collision.GetComponent<PlayerHealth>().takeDamage(bulletDamage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 
 
