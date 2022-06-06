@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class BossTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject Wall;
+    [SerializeField] GameObject[] Wall;
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Wall.SetActive(true);
+            foreach (GameObject go in Wall)
+            {
+                go.SetActive(true);
+            }
         }
     }
 }

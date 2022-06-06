@@ -17,14 +17,14 @@ public class FireBall : MonoBehaviour
         _rigidbody.AddForce(new Vector2(9.8f * 25f, 9.8f * 25f));
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player")){
-            collision.GetComponent<PlayerHealth>().takeDamage(bulletDamage);
-            Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().takeDamage(bulletDamage);
         }
-        
     }
+
 
 
 }
