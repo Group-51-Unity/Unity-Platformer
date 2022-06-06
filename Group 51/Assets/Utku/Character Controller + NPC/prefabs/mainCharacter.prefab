@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 7595553909488152222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7595553909197093644}
   - {fileID: 7595553910275067017}
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxJump: 1
-  jumpSpeed: 8.98
+  jumpSpeed: 3.5
   jumpPhase: 0
 --- !u!114 &7595553909488152209
 MonoBehaviour:
@@ -199,10 +199,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ff0087a837be649be4db06d537dee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 4
+  maxSpeed: 2
   acceleration: 15
   airAcceleration: 20
-  mainCharScale: 4
+  velocity: {x: 0, y: 0}
+  mainCharScale: 1
 --- !u!114 &7595553909488152232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +498,7 @@ MonoBehaviour:
   runSoundEffect: {fileID: 7595553909488152237}
   jumpSoundEffect: {fileID: 7595553909488152238}
   fallSoundEffect: {fileID: 1950993498}
+  _animator: {fileID: 0}
 --- !u!114 &7595553909488152225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,8 +745,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7595553910275066997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28406394, y: 0.23465002, z: -10}
-  m_LocalScale: {x: 0.140625, y: 0.1125, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7595553909488152215}
   m_RootOrder: 1
@@ -776,7 +778,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.61
+  orthographic size: 1.36
   m_Depth: -0.54
   m_CullingMask:
     serializedVersion: 2
