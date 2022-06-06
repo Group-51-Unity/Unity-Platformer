@@ -14,5 +14,6 @@ public class antidote : MonoBehaviour
             collision.GetComponent<PlayerHealth>().Heal(healingAmount);
             Destroy(gameObject);
         }
+
     }
 }
