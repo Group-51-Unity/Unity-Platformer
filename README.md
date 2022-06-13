@@ -179,3 +179,15 @@ Zamanlama konusunda sıkıntılar yaşamış olsak da, ekip olarak olabildiğinc
 
 ## Daily Scrum
 [Daily Scrum Linki](https://raw.githubusercontent.com/Group-51-Unity/Unity-Platformer/main/dailyscrum.png)
+
+
+--- 
+# Kullanılan Asset Linkleri
++ Seviyeler ve karakterler 
+ + https://assetstore.unity.com/packages/2d/characters/gothicvania-swamp-152865#description
+ + https://assetstore.unity.com/packages/2d/characters/gothicvania-church-pack-147117#description
+ + https://assetstore.unity.com/packages/2d/environments/platformer-set-150023#description
+ + https://assetstore.unity.com/packages/2d/characters/gothicvania-town-101407#description
+ + https://assetstore.unity.com/packages/2d/characters/gothicvania-cemetery-120509#publisher
++ Bgm
+ + https://assetstore.unity.com/packages/audio/music/orchestral/rpg-medieval-themes-196607#description
